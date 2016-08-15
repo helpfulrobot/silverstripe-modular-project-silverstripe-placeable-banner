@@ -3,5 +3,5 @@
 ## Installation
 Composer is the recommended way of installing SilverStripe modules.
 ```
-composer require /silverstripe-placeable-banner 1.*
+composer require silverstripe-modular-project/silverstripe-placeable-banner 1.*
 ```

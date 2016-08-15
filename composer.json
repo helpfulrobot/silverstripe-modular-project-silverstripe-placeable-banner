@@ -1,8 +1,8 @@
 {
-  "name": "/silverstripe-placeable-banner",
+  "name": "silverstripe-modular-project/silverstripe-placeable-banner",
   "description": "Silverstripe previews",
   "type": "silverstripe-module",
-  "keywords": ["silverstripe", "modular", "sections"],
+  "keywords": ["silverstripe", "modular", "regions"],
   "license": "BSD-3-Clause",
   "authors": [
     {
@@ -14,7 +14,7 @@
   {
     "silverstripe/framework": "^3.2",
     "silverstripe/cms": "^3.2",
-    "/silverstripe-placeable": "1.*",
+    "silverstripe-modular-project/silverstripe-placeable": "1.*",
     "sheadawson/silverstripe-linkable": "^1.2"
   },
   "extra": {

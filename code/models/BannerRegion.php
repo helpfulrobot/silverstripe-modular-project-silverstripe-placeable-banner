@@ -5,7 +5,7 @@
  * @package silverstripe
  * @subpackage mysite
  */
-class BannerSection extends SectionObject
+class BannerRegion extends RegionObject
 {
     /**
      * Singular name for CMS
@@ -46,30 +46,57 @@ class BannerSection extends SectionObject
     public function getCMSPageFields()
     {
         $fields = parent::getCMSPageFields();
-        $fields->push(
-            GridField::create(
-                'Banners',
-                _t('Placeable-Banner.BANNERS', 'Banners'),
-                $this->Banners(),
-                GridFieldConfig_RelationEditor::create()
-                    ->addComponent(new GridFieldOrderableRows())
+        $fields->addFields(
+            array(
+                GridField::create(
+                    'Banners',
+                    _t('Placeable-Banner.BANNERS', 'Banners'),
+                    $this->Banners(),
+                    GridFieldConfig_RelationEditor::create()
+                        ->addComponent(new GridFieldOrderableRows())
+                )
             )
         );
         $this->extend('updateCMSPageFields', $fields);
         return $fields;
     }
 }
-class BannerSection_Controller extends SectionObject_Controller
+class BannerRegion_Controller extends RegionObject_Controller
 {
     public function init() {
         parent::init();
     }
 }
-class BannerSection_Preset extends SectionObject_Preset
+class BannerRegion_Preset extends RegionObject_Preset
 {
     /**
      * Singular name for CMS
      * @var string
      */
     private static $singular_name = 'Rotating Banner Preset';
+
+    /**
+     * Database fields
+     * @var array
+     */
+    private static $db = array(
+        'FilePath' => 'Text'
+    );
+
+    /**
+     * CMS Fields
+     * @return FieldList
+     */
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        $fields->addFieldToTab(
+            'Root.Main',
+            TextField::create(
+                'FilePath',
+                'FilePath'
+            )
+        );
+        return $fields;
+    }
 }
