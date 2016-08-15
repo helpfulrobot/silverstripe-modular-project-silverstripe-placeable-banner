@@ -50,7 +50,7 @@ class BannerRegion extends RegionObject
             array(
                 GridField::create(
                     'Banners',
-                    _t('Placeable-Banner.BANNERS', 'Banners'),
+                    _t('BannerRegion.BANNERS', 'Banners'),
                     $this->Banners(),
                     GridFieldConfig_RelationEditor::create()
                         ->addComponent(new GridFieldOrderableRows())
