@@ -8,6 +8,18 @@
 class PlaceableBanner extends DataObject
 {
     /**
+     * Singular name for CMS
+     * @var string
+     */
+    private static $singular_name = 'Banner';
+
+    /**
+     * Plural name for CMS
+     * @var string
+     */
+    private static $plural_name = 'Banners';
+    
+    /**
      * Database fields
      * @var array
      */
