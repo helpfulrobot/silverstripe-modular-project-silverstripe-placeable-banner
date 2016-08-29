@@ -70,12 +70,6 @@ class BannerRegion_Controller extends RegionObject_Controller
 class BannerRegion_Preset extends RegionObject_Preset
 {
     /**
-     * Singular name for CMS
-     * @var string
-     */
-    private static $singular_name = 'Rotating Banner Preset';
-
-    /**
      * Database fields
      * @var array
      */
